@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/NeneGame.unity
+- path: Assets/NeneGameStage2.unity
   isLoaded: 1
   isActive: 1
