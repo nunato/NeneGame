@@ -50,6 +50,7 @@
      <Compile Include="Assets\Script\FontScalable.cs" />
      <Compile Include="Assets\Script\GoalManager.cs" />
      <Compile Include="Assets\Script\PlayerMoveManager.cs" />
+     <Compile Include="Assets\Script\SceneLoad.cs" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
