@@ -6,6 +6,7 @@ public class PlayerMoveManager : MonoBehaviour
 {
 	public float speed;
 
+	private float moveX,moveZ;
 	private Rigidbody rbyPlayer;
 
 	void Start()
@@ -15,9 +16,20 @@ public class PlayerMoveManager : MonoBehaviour
 
 	void Update () 
 	{
-		float moveX = Input.GetAxis( "Horizontal");
-		float moveZ = Input.GetAxis( "Vertical" );
+		moveX = Input.GetAxis( "Horizontal");
+		moveZ = Input.GetAxis( "Vertical" );
+	}
 
-		rbyPlayer.AddForce( moveX * speed, 0, moveZ * speed );
+	void FixedUpdate()
+	{
+		Vector3 cameraForward = Vector3.Scale( Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+
+		Vector3 moveForward = cameraForward * moveZ + Camera.main.transform.right * moveX;
+
+		rbyPlayer.velocity = moveForward * speed + new Vector3( 0, rbyPlayer.velocity.y, 0);
+
+		if( moveForward != Vector3.zero ){
+			transform.rotation = Quaternion.LookRotation( moveForward );
+		}
 	}
 }
