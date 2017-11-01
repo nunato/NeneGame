@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerMoveManager : MonoBehaviour
 {
 	public float speed;
+	public float jumpSpeed;
 
 	private float moveX,moveZ;
 	private Rigidbody rbyPlayer;
+
+	private bool fPlayerJump = true;
 
 	void Start()
 	{
@@ -30,6 +33,24 @@ public class PlayerMoveManager : MonoBehaviour
 
 		if( moveForward != Vector3.zero ){
 			transform.rotation = Quaternion.LookRotation( moveForward );
+		}
+
+		if( Input.GetKeyDown( KeyCode.Space ) && fPlayerJump == false ){
+			rbyPlayer.velocity = new Vector3( 0, 1, 0 ) * jumpSpeed;
+		}
+	}
+
+	void OnCollisionExit( Collision other )
+	{
+		if( other.gameObject.tag == "Ground" ){
+			fPlayerJump = true;
+		}
+	}
+
+	void OnCollisionEnter( Collision other )
+	{
+		if( other.gameObject.tag == "Ground" ){
+			fPlayerJump = false;
 		}
 	}
 }
