@@ -9,6 +9,7 @@ public class GoalManager : MonoBehaviour
 	void OnTriggerEnter( Collider cllider )
 	{
 		if( cllider.CompareTag( "Player" ) ){
+			StageClearManager.SetStageClearFlag( true );
 			clearText.SetActive(true);
 			Destroy(gameObject);
 		}
