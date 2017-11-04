@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class GoalManager : MonoBehaviour
 {
+	public GameObject clearText;
+
 	void OnTriggerEnter( Collider cllider )
 	{
 		if( cllider.CompareTag( "Player" ) ){
-			Destroy( gameObject );
+			clearText.SetActive(true);
+			Destroy(gameObject);
 		}
 	}
 }
