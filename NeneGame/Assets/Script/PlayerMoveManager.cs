@@ -7,7 +7,6 @@ public class PlayerMoveManager : MonoBehaviour
 	public float speed;
 	public float jumpSpeed;
 
-	private float moveX,moveZ;
 	private Rigidbody rbyPlayer;
 
 	private bool fPlayerJump = true;
@@ -17,27 +16,11 @@ public class PlayerMoveManager : MonoBehaviour
 		rbyPlayer = GetComponent<Rigidbody>();
 	}
 
-	void Update () 
-	{
-		moveX = Input.GetAxis( "Horizontal");
-		moveZ = Input.GetAxis( "Vertical" );
-	}
-
 	void FixedUpdate()
 	{
-		Vector3 cameraForward = Vector3.Scale( Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+		Move();
 
-		Vector3 moveForward = cameraForward * moveZ + Camera.main.transform.right * moveX;
-
-		rbyPlayer.velocity = moveForward * speed + new Vector3( 0, rbyPlayer.velocity.y, 0);
-
-		if( moveForward != Vector3.zero ){
-			transform.rotation = Quaternion.LookRotation( moveForward );
-		}
-
-		if( Input.GetKeyDown( KeyCode.Space ) && fPlayerJump == false ){
-			rbyPlayer.velocity = new Vector3( 0, 1, 0 ) * jumpSpeed;
-		}
+		Jump();
 	}
 
 	void OnCollisionExit( Collision other )
@@ -51,6 +34,29 @@ public class PlayerMoveManager : MonoBehaviour
 	{
 		if( other.gameObject.tag == "Ground" ){
 			fPlayerJump = false;
+		}
+	}
+
+	private void Move()
+	{
+		float moveX = Input.GetAxis( "Horizontal");
+		float moveZ = Input.GetAxis( "Vertical" );
+
+		Vector3 cameraForward = Vector3.Scale( Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+
+		Vector3 moveForward = cameraForward * moveZ + Camera.main.transform.right * moveX;
+
+		rbyPlayer.velocity = moveForward * speed + new Vector3( 0, rbyPlayer.velocity.y, 0);
+
+		if( moveForward != Vector3.zero ){
+			transform.rotation = Quaternion.LookRotation( moveForward );
+		}
+	}
+
+	private void Jump()
+	{
+		if( Input.GetKeyDown( KeyCode.Space ) && fPlayerJump == false ){
+			rbyPlayer.velocity = new Vector3( 0, 1, 0 ) * jumpSpeed;
 		}
 	}
 }
