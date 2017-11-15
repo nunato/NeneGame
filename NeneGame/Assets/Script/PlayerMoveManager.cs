@@ -23,20 +23,6 @@ public class PlayerMoveManager : MonoBehaviour
 		Jump();
 	}
 
-	void OnCollisionExit( Collision other )
-	{
-		if( other.gameObject.tag == "Ground" ){
-			fPlayerJump = true;
-		}
-	}
-
-	void OnCollisionEnter( Collision other )
-	{
-		if( other.gameObject.tag == "Ground" ){
-			fPlayerJump = false;
-		}
-	}
-
 	private void Move()
 	{
 		float moveX = Input.GetAxis( "Horizontal");
@@ -57,6 +43,20 @@ public class PlayerMoveManager : MonoBehaviour
 	{
 		if( Input.GetKeyDown( KeyCode.Space ) && fPlayerJump == false ){
 			rbyPlayer.velocity = new Vector3( 0, 1, 0 ) * jumpSpeed;
+		}
+	}
+
+	void OnCollisionExit( Collision other )
+	{
+		if( other.gameObject.tag == "Ground" ){
+			fPlayerJump = true;
+		}
+	}
+
+	void OnCollisionEnter( Collision other )
+	{
+		if( other.gameObject.tag == "Ground" ){
+			fPlayerJump = false;
 		}
 	}
 }

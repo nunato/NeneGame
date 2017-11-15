@@ -54,6 +54,8 @@
      <Compile Include="Assets\Script\PlayerMoveManager.cs" />
      <Compile Include="Assets\Script\StageClearManager.cs" />
      <Compile Include="Assets\Script\StageSelectController.cs" />
+     <Compile Include="Assets\Script\WallDead.cs" />
+     <Compile Include="Assets\Script\WallMoveManager.cs" />
      <Compile Include="Assets\Script\WallSpownManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
