@@ -11,30 +11,36 @@ public class PlayerDead : MonoBehaviour
 	public int deadArea = -2;
 	public GameObject playerDeadParticle;
 
-	private Vector3 spownPoint;
+	private RespownManager respownManager;
 
 	void Start()
 	{
-		spownPoint = transform.position;
+		GameObject reManager = GameObject.Find("RespownManager");
+		respownManager = reManager.gameObject.GetComponent<RespownManager>();
 	}
 
 	void Update()
 	{
+		/* エリア外への移動 */
 		if( transform.position.y < deadArea ){
-			respawnPlayer( );
+			deadPlayer();
 		}
 	}
 
 	void OnCollisionEnter( Collision other )
 	{
+		/* エネミーとの接触 */
 		if( other.gameObject.tag == "Enemy" ){
-			respawnPlayer( );
+			deadPlayer();
 		}
 	}
 
-	private void respawnPlayer( )
+	private void deadPlayer()
 	{
 		Instantiate( playerDeadParticle, transform.position, Quaternion.identity );
-		transform.position = spownPoint;
+		respownManager.isPlayerDead = true;
+		respownManager.ShowDeadText();
+
+		Destroy(gameObject);
 	}
 }

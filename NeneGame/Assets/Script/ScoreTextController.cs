@@ -9,11 +9,11 @@ public class ScoreTextController : MonoBehaviour
 
 	void Start ()
 	{
-		ScoreText.text = "Score: 0";
+		ScoreText.text = "Score: " + ScoreManager.gameScore;
 	}
 
 	void Update ()
 	{
-		ScoreText.text = "Score: " + ScoreManager.GetScore();
+		ScoreText.text = "Score: " + ScoreManager.gameScore;
 	}
 }
