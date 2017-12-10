@@ -46,23 +46,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\ArrowButton.cs" />
      <Compile Include="Assets\Script\CameraController.cs" />
-     <Compile Include="Assets\Script\FontScalable.cs" />
-     <Compile Include="Assets\Script\GoalManager.cs" />
      <Compile Include="Assets\Script\ParticleDead.cs" />
      <Compile Include="Assets\Script\PlayerDead.cs" />
      <Compile Include="Assets\Script\PlayerMoveManager.cs" />
      <Compile Include="Assets\Script\RespownManager.cs" />
      <Compile Include="Assets\Script\ScoreManager.cs" />
      <Compile Include="Assets\Script\ScoreTextController.cs" />
-     <Compile Include="Assets\Script\StageClearManager.cs" />
      <Compile Include="Assets\Script\StageSelectController.cs" />
      <Compile Include="Assets\Script\WallDead.cs" />
      <Compile Include="Assets\Script\WallMoveManager.cs" />
      <Compile Include="Assets\Script\WallSpownManager.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -77,9 +72,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
