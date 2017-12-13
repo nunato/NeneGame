@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class RespownManager : MonoBehaviour
 {
 	public GameObject deadText;
+	public GameObject SceneButtonController;
 
 	private bool IsPlayerDead;
 	private GameObject player;
@@ -27,11 +28,13 @@ public class RespownManager : MonoBehaviour
 			SceneManager.LoadScene("NenegameStage4");
 			deadText.SetActive(false);
 			IsPlayerDead = false;
+			SceneButtonController.SetActive(false);
 		}
 	}
 
 	public void ShowDeadText()
 	{
 		deadText.SetActive(true);
+		SceneButtonController.SetActive(true);
 	}
 }

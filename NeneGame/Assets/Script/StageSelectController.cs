@@ -10,6 +10,7 @@ public class StageSelectController : MonoBehaviour
 {
 	public void OnClickStart( )
 	{
+		Debug.Log("Restart");
 		SceneManager.LoadScene("NeneGameStage4");
 	}
 	public void OnClickExit()

@@ -16,14 +16,14 @@ public class ArrowButton : MonoBehaviour
 
 	public void OnPushDown( float Side )
 	{
-		Debug.Log( "Side" + Side );
+	//	Debug.Log( "Side" + Side );
 		PlayerMove.IsMovePlayer( true );
 		IsPress = true;
 		arrowValue = Side;
 	}
 	public void OnPudhUp()
 	{
-		Debug.Log( "OnPudhUp" );
+	//	Debug.Log( "OnPudhUp" );
 		PlayerMove.IsMovePlayer( false );
 		IsPress = false;
 	}
@@ -40,7 +40,7 @@ public class ArrowButton : MonoBehaviour
 
 	private void Move( float Side )
 	{
-		Debug.Log( "MoveSide" + Side );
+	//	Debug.Log( "MoveSide" + Side );
 		PlayerMove.PlayerMove( Side );
 	}
 }
