@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*************************************************
+ゲーム画面への遷移とゲームの終了ボタンを管理するファイル
+**************************************************/
 public class StageSelectController : MonoBehaviour
 {
-	public void OnClick( string sceneName )
+	public void OnClickStart( )
 	{
-		if( sceneName != null ){
-			SceneManager.LoadScene(sceneName);
-		}
+		SceneManager.LoadScene("NeneGameStage4");
+	}
+	public void OnClickExit()
+	{
+#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+#else
+		Application.Quit();
+#endif
 	}
 }
