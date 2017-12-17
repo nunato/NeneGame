@@ -5,7 +5,7 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
     Vendor:   NVIDIA
     VRAM:     3072 MB
-    Driver:   10.18.13.6869
+    Driver:   23.21.13.8813
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -17,20 +17,20 @@ Platform assembly: C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Da
 Loading C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.017 seconds
+- Completed reload, in  0.031 seconds
 Platform assembly: C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\owner\Documents\GitHub\NeneGame\NeneGame\NeneGame_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.423448 ms
+UnloadTime: 1.719334 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 24d8 -> priority: 1 
-  Thread -> id: 25ac -> priority: 1 
+  Thread -> id: 2cf4 -> priority: 1 
+  Thread -> id: 1a58 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.224490 ms
+UnloadTime: 7.682587 ms
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 350.
-Total: 0.135402 ms (FindLiveObjects: 0.014817 ms CreateObjectMapping: 0.010474 ms MarkObjects: 0.102956 ms  DeleteObjects: 0.006642 ms)
+Total: 0.146897 ms (FindLiveObjects: 0.018394 ms CreateObjectMapping: 0.010218 ms MarkObjects: 0.109853 ms  DeleteObjects: 0.007408 ms)
 
